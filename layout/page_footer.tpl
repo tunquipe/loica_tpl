@@ -11,7 +11,7 @@
 
                 {% if _u.status == 1 %}
                 <strong>Soporte técnico:</strong>
-                <a href="mailto:sac@academiaadity.cl" target="_blank">sac@academiaadity.cl</a>
+                <a href="mailto:soporte@tuempresa.cl" target="_blank">soporte@tuempresa.cl</a>
                 {% endif %}
 
                 {#{% if administrator_name is not null %}
