@@ -44,7 +44,10 @@
             </div>
             <div class="col-xs-12 col-md-4 text-right">
                 Aula Virtual proporcionada por:
-                <img width="100px" src="{{ _p.web_css_theme }}images/logo_footer.png" />
+                <a href="https://tunqui.pe" target="_blank">
+                    <img width="100px" src="{{ _p.web_css_theme }}images/logo_footer.png" />
+                </a>
+
                 {#{% if _s.software_name is not empty %}
                     <div class="software-name">
                         <a href="{{_p.web}}" target="_blank">
