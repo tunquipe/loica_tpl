@@ -187,7 +187,7 @@
             </div>
             <div class="col-md-10">
 
-
+                    <div class="container">
                     {% if plugin_content_top %}
                         <div class="page-content-top">
                             {{ plugin_content_top }}
@@ -255,7 +255,7 @@
                             {{ plugin_content_bottom }}
                         </div>
                     {% endif %}
-
+                    </div>
 
             </div>
         </div>
