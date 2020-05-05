@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         {% endif %}
-                        {#{% if course_block %}
+                        {% if course_block %}
                             <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                     <h4 class="panel-title">
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                             </div>
-                        {% endif %}#}
+                        {% endif %}
 
                         {% if _u.is_admin %}
                             {% if navigation_links %}
@@ -187,7 +187,7 @@
             </div>
             <div class="col-md-10">
 
-
+                <div class="container">
                     {% if plugin_content_top %}
                         <div class="page-content-top">
                             {{ plugin_content_top }}
@@ -255,7 +255,7 @@
                             {{ plugin_content_bottom }}
                         </div>
                     {% endif %}
-
+                </div>
 
             </div>
         </div>
