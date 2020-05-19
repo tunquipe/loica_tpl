@@ -60,6 +60,13 @@
                                     </div>
                                 </li>
                                 <li role="separator" class="divider"></li>
+
+                                <li class="user-body">
+                                    <a title="{{ "EditProfile"|get_lang }}" href="{{ _p.web }}main/auth/profile.php">
+                                        <em class="fa fa-edit" aria-hidden="true"></em> {{ "EditProfile"|get_lang }}
+                                    </a>
+                                </li>
+
                                 {% if message_url %}
                                     <li class="user-body">
                                         <a title="{{ "Inbox"|get_lang }}" href="{{ message_url }}">
@@ -68,7 +75,7 @@
                                     </li>
                                 {% endif %}
 
-                                {% if pending_survey_url %}
+                                {#{% if pending_survey_url %}
                                     <li class="user-body">
                                         <a href="{{ pending_survey_url }}">
                                             <em class="fa fa-pie-chart"></em> {{ 'PendingSurveys'|get_lang }}
@@ -84,6 +91,7 @@
                                         </a>
                                     </li>
                                 {% endif %}
+
                                 {% if _u.status == 1 %}
                                 <li class="user-body">
                                     <a id="buycourses" type="Gestión de ventas" href="{{ _p.web }}plugin/buycourses/index.php">
@@ -91,6 +99,7 @@
                                     </a>
                                 </li>
                                 {% endif %}
+                                #}
                                 <li class="user-body">
                                     <a id="logout_button" title="{{ "Logout"|get_lang }}" href="{{ logout_link }}">
                                         <em class="fa fa-sign-out"></em> {{ "Logout"|get_lang }}
