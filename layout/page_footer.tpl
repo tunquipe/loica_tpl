@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
 
-                {% if _u.status == 1 %}
+                {#{% if _u.status == 1 %}
                 <strong>Soporte técnico:</strong>
                 <a href="mailto:soporte@tuempresa.cl" target="_blank">soporte@tuempresa.cl</a>
-                {% endif %}
+                {% endif %}#}
 
                 {#{% if administrator_name is not null %}
                     <div class="administrator-name">
@@ -43,20 +43,20 @@
                 {% endif %}
             </div>
             <div class="col-xs-12 col-md-4 text-right">
-                Aula Virtual proporcionada por:
+                {#Aula Virtual proporcionada por:
                 <img width="100px" src="{{ _p.web_css_theme }}images/logo_footer.png" />
-                {#{% if _s.software_name is not empty %}
+                {% if _s.software_name is not empty %}
                     <div class="software-name">
                         <a href="{{_p.web}}" target="_blank">
                             {{ "PoweredByX" |get_lang | format(_s.software_name) }}
                         </a>&copy; {{ "now"|date("Y") }}
                     </div>
-                {% endif %}#}
+                {% endif %}
                 {% if plugin_footer_right is not null %}
                     <div id="plugin_footer_right">
                         {{ plugin_footer_right }}
                     </div>
-                {% endif %}
+                {% endif %}#}
             </div>
         </div>
         {% if footer_extra_content  %}
