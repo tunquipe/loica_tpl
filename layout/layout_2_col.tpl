@@ -21,7 +21,7 @@
                     {% endif %}
 
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        {% if _u.is_admin %}
+
                             {% if profile_block %}
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                             {% endif %}
-                        {% endif %}
+
 
                         {% if help_block %}
                             <div class="panel panel-default">
