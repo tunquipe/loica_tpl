@@ -8,7 +8,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ _p.web }}">
-                <img src="{{ _p.web_css_theme }}images/header-logo.png"/>
+                {% if logo_id %}
+                    <img src="{{ logo_id }}"/>
+                {% else %}
+                    <img src="{{ _p.web_css_theme }}images/header-logo.png"/>
+                {% endif %}
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
