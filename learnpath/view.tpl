@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ _p.web }}">
-                <img width="140px" src="{{ _p.web_css_theme }}images/header-logo.png" />
+                <img src="{{ _p.web_css_theme }}images/header-logo.png" />
             </a>
 
             <a href="{{ button_home_url }}" class="btn btn-success">
