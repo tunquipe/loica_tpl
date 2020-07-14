@@ -1,4 +1,32 @@
-
+{% if lp_mode == 'embedframe' %}
+    <div class="menu-float">
+        <a href="{{ button_home_url }}" title="{{ 'GoBack'|get_lang }}" class="btn-circle">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div id="learning_path_right_zone" class="no-right-col">
+        <div class="lp-view-zone-container">
+            <div class="lp-view-tabs">
+                <div id="tab-iframe" class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="lp-view-content">
+                        <div id="wrapper-iframe">
+                            <iframe
+                                id="content_id"
+                                name="content_name"
+                                src="{{ iframe_src }}"
+                                style="width:100%; height:100%"
+                                border="0"
+                                frameborder="0"
+                                allowfullscreen="true"
+                                webkitallowfullscreen="true" mozallowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
 <nav class="navbar navbar-inverse navbar-learn">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -313,6 +341,7 @@
     {# end right Zone #}
 </div>
 
+{% endif %}
 <script>
     /*document.querySelector('.menu-button').onclick = function(e) {
         e.preventDefault(); document.querySelector('.circle').classList.toggle('open');
