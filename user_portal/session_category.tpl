@@ -33,3 +33,4 @@
 </div>
 {# session_category.sessions is generated with the session.tpl #}
 {{ session_category.sessions }}
+
