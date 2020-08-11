@@ -1,5 +1,5 @@
 <p>{{ 'helloUser'|get_lang }} <strong>{{ name }}</strong>, {{ 'howAreYour'|get_lang }}</p>
-<p>{{ 'textWelcome'|get_lang }}</p>
+<p>{{ 'textWelcomeAdity'|get_lang }}</p>
 <p>{{ 'accessCredentials'|get_lang }}</p>
 <div style="padding: 20px; background-color: #e5eaff;">
     {{ 'linkPlataform'|get_lang }}: {{ mailWebPath }}<br>
