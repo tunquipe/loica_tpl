@@ -19,6 +19,11 @@
     <div class="row">
         <div class="col-md-8">
             <h2 class="session-title">{{ session.name }}</h2>
+            {% if session_video %}
+            <div class="embed-responsive embed-responsive-16by9">
+                {{ essence.replace(session_video) }}
+            </div>
+            {% endif %}
             {% if not 'hide_social_media_links'|api_get_configuration_value %}
                 <div class="share-social-media">
                     <ul class="sharing-buttons">
