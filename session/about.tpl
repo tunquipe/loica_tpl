@@ -19,13 +19,6 @@
     <div class="row">
         <div class="col-md-8">
             <h2 class="session-title">{{ session.name }}</h2>
-
-            {% if session_video %}
-                <div class="embed-responsive embed-responsive-16by9">
-                    {{ essence.replace(session_video) }}
-                </div>
-            {% endif %}
-
             {% if not 'hide_social_media_links'|api_get_configuration_value %}
                 <div class="share-social-media">
                     <ul class="sharing-buttons">
@@ -220,15 +213,6 @@
 {% else %}
 
     <section id="about-course">
-        {#{% if is_subscribed and user_session_time != -0 and user_session_time >= 1 %}
-            <div class="alert alert-info">
-                {{ 'AlreadyRegisteredToSession'|get_lang }}
-            </div>
-        {% elseif is_subscribed and user_session_time < 1 %}
-            <div class="alert alert-warning">
-                {{ 'YourSessionTimeIsExpired'|get_lang }}
-            </div>
-        {% endif %}#}
         <section class="session">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -363,16 +347,21 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-5">
-                            {% if course_video %}
+                            {% if session_video %}
                                 <div class="embed-responsive embed-responsive-16by9">
-                                    {{ essence.replace(course_video) }}
+                                    {{ essence.replace(session_video) }}
                                 </div>
                             {% else %}
-                                <div class="course-image">
-                                    <img src="{{ course_data.image }}" class="img-rounded img-responsive" width="100%">
-                                </div>
+                                {% if course_video %}
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        {{ essence.replace(course_video) }}
+                                    </div>
+                                {% else %}
+                                    <div class="course-image">
+                                        <img src="{{ course_data.image }}" class="img-rounded img-responsive" width="100%">
+                                    </div>
+                                {% endif %}
                             {% endif %}
-
                         </div>
                         <div class="col-sm-7">
                             {% if courses|length > 1 %}
