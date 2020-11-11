@@ -266,6 +266,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="session-info">
+                                <!--
                                 <div class="date">
                                     <p>
                                         {% if session.duration %}
@@ -274,7 +275,7 @@
                                             {{ session_date.display }}
                                         {% endif %}
                                     </p>
-                                </div>
+                                </div> -->
                                 {% if is_premium == false %}
                                     <h5>{{ 'CourseSubscription'|get_lang }}</h5>
                                     <div class="session-subscribe">
