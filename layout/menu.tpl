@@ -33,7 +33,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li id="count_message_li" class="hidden">
                         <a href="{{ message_url }}">
-                            <span id="count_message" class="badge badge-warning"></span>
+                            <span class="spinner">
+                                <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                            </span>
+                            <span id="count_message" class="badge badge-warning "></span>
                         </a>
                     </li>
                     {% if language_form %}
@@ -60,19 +63,18 @@
                                     </div>
                                 </li>
                                 <li role="separator" class="divider"></li>
+                                {% if message_url %}
+                                <li class="user-body">
+                                    <a title="{{ "Notifications"|get_lang }}" href="{{ message_url }}">
+                                        <em class="fa fa-envelope" aria-hidden="true"></em> {{ "Notifications"|get_lang }}
+                                    </a>
+                                </li>
+                                {% endif %}
                                 <li class="user-body">
                                     <a title="{{ "EditProfile"|get_lang }}" href="{{ _p.web }}main/auth/profile.php">
                                         <em class="fa fa-edit" aria-hidden="true"></em> {{ "EditProfile"|get_lang }}
                                     </a>
                                 </li>
-                                {% if message_url %}
-                                    <li class="user-body">
-                                        <a title="{{ "Inbox"|get_lang }}" href="{{ message_url }}">
-                                            <em class="fa fa-envelope" aria-hidden="true"></em> {{ "Inbox"|get_lang }}
-                                        </a>
-                                    </li>
-                                {% endif %}
-
                                 {#{% if pending_survey_url %}
                                     <li class="user-body">
                                         <a href="{{ pending_survey_url }}">
