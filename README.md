@@ -16,7 +16,7 @@ Usually, any template branch will be matched by the corresponding branch in the 
 To create a new branch called "example" in a working Chamilo installation:
 ```
 cd main/template
-git clone -b master https://github.com/beeznest/templates example
+git clone -b master https://github.com/aragonc/loica_tpl example
 cd example
 git checkout -b example
 vim README.md
@@ -32,6 +32,6 @@ git push origin example
 To download an existing template 'example', get into an existing Chamilo installation and do:
 ```
 cd main/template
-git clone -b example https://github.com/beeznest/templates example
+git clone -b example https://github.com/aragonc/loica_tpl example
 ```
 That's all. Don't forget to add the name of the destination folder, otherwise it will be called 'templates'.
