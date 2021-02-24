@@ -18,9 +18,6 @@
 
     <div class="container">
         <div class="row">
-            {#<div class="col-xs-12 col-md-2">
-                {% include 'layout/sidebar.tpl'|get_template %}
-            </div>#}
             <div class="col-xs-12 col-md-12">
                 {% include 'layout/page_body.tpl'|get_template %}
                 {% block content %}
