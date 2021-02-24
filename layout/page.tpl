@@ -51,11 +51,13 @@
                     {{ content }}
                 {% endblock %}
             </div>
+    </main>
 
-            {% if show_footer == true %}
-                {% include 'layout/page_footer.tpl'|get_template %}
-            {% endif %}
-     
+    {% if show_footer == true %}
+    {% include 'layout/page_footer.tpl'|get_template %}
+    {% endif %}
+
     {% include 'layout/modals.tpl'|get_template %}
+
 </body>
 </html>
