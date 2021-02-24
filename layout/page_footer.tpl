@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="footer">
 <div class="container">
     {% if plugin_pre_footer is not null %}
         <div id="plugin_pre_footer">
