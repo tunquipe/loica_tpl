@@ -1,4 +1,30 @@
-<div class="sidebar">
+
+<script>
+
+        /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementById("sidebar-open-btn").style.display = "none";
+            document.getElementById("sidebar-close-btn").style.display = "block";
+        }
+
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("sidebar").style.left = "-230px";
+            document.getElementById("sidebar-open-btn").style.display = "block";
+            document.getElementById("sidebar-close-btn").style.display = "none";
+        }
+
+</script>
+
+<a id="sidebar-open-btn" onclick="openNav()" class="btn btn-default" href="#">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</a>
+<a id="sidebar-close-btn" onclick="closeNav()" class="btn btn-default" href="#">
+    <i class="fa fa-times" aria-hidden="true"></i>
+</a>
+<div id="sidebar" class="sidebar">
+
     {% if plugin_menu_top %}
         {{ display.pluginSidebar('sidebar-top', plugin_menu_top) }}
     {% endif %}
