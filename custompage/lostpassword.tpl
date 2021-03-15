@@ -18,6 +18,11 @@
                     <div class="col-md-6">
                         <div class="form-blue">
                             {{ form }}
+                            <a href=/index.php style= text-decoration:none >
+                                <button class="btn btn-primary btn-block" ><i class="fa fa-undo" aria-hidden="true" >
+                                    </i> {{ "Return"|get_lang }}   
+                                </button>
+                            </a>
                             <div class="software-name">
                                 <a href="{{_p.web}}" target="_blank">
                                     {{ "PoweredByX" |get_lang | format(_s.software_name) }}
