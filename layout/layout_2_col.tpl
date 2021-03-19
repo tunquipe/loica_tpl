@@ -8,10 +8,10 @@
 
     <div class="page-inside">
         <div class="row">
-            <div class="col-md-2">
+
                 {% include 'layout/sidebar.tpl'|get_template %}
-            </div>
-            <div class="col-md-10">
+
+            <div class="col-md-12">
 
                     <div class="container">
                     {% if plugin_content_top %}
