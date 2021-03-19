@@ -47,29 +47,6 @@
         <div id="navbar" class="navbar-collapse collapse">
             {% if _u.logged == 1 and not user_in_anon_survey %}
                 <ul class="nav navbar-nav navbar-right">
-                    <li id="btn-menu-float" class="navigation">
-                        {% if show_left_column == 1 %}
-                            <a href="#" title = "{{ 'Expand'|get_lang }}" id="lp-view-expand-toggle"
-                               class="icon-toolbar expand" role="button">
-                                {% if lp_mode == 'embedframe' %}
-                                    <span class="fa fa-compress" aria-hidden="true"></span>
-                                    <span class="sr-only">{{ 'Expand'|get_lang }}</span>
-                                {% else %}
-                                    <span class="fa fa-expand" aria-hidden="true"></span>
-                                    <span class="sr-only">{{ 'Expand'|get_lang }}</span>
-                                {% endif %}
-                            </a>
-                        {% endif %}
-                        <a id="home-course"
-                           title = "{{ 'Home'|get_lang }}"
-                           href="{{ button_home_url }}"
-                           class="icon-toolbar" target="_self"
-                           onclick="javascript: window.parent.API.save_asset();">
-                            <em class="fa fa-home"></em> <span class="hidden-xs hidden-sm"></span>
-                        </a>
-                        {{ navigation_bar }}
-
-                    </li>
                     {% if _u.status != 6 %}
                         <li class="dropdown avatar-user">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -128,13 +105,27 @@
         </div><!--/.navbar-collapse -->
     </div>
 </nav>
-
-<div id="learning_path_main" class="{{ is_allowed_to_edit ? 'lp-view-include-breadcrumb' }} {{ lp_mode == 'embedframe' ? 'lp-view-collapsed' : '' }}">
+<div id="tool-expand" class="expand-frame">
+    {% if show_left_column == 1 %}
+    <a href="#" title = "{{ 'Expand'|get_lang }}" id="lp-view-expand-toggle"
+       class="icon-toolbar expand" role="button">
+        {% if lp_mode == 'embedframe' %}
+        <span class="fa fa-compress" aria-hidden="true"></span>
+        <span class="sr-only">{{ 'Expand'|get_lang }}</span>
+        {% else %}
+        <span class="fa fa-expand" aria-hidden="true"></span>
+        <span class="sr-only">{{ 'Expand'|get_lang }}</span>
+        {% endif %}
+    </a>
+    {% endif %}
+</div>
+<div id="learning_path_main" class="{{ is_allowed_to_edit ? 'lp-view-include-breadcrumb' }} {{ lp_mode == 'embedframe' ? '' : 'lp-view-collapsed' }}">
     {% if show_left_column == 1 %}
     <div id="learning_path_left_zone" class="sidebar-scorm">
         <div class="lp-view-zone-container">
             <div id="scorm-info">
                 <div id="panel-scorm" class="panel-body">
+
                     <div class="image-avatar">
                         {% if lp_author == '' %}
                            <div class="text-center">
@@ -282,7 +273,13 @@
     </div>
     {# end left zone #}
     {% endif %}
-
+    <div id="navbar-mobile">
+        <ul class="nav navbar-nav">
+            <li id="btn-menu-float" class="navigation">
+                {{ navigation_bar }}
+            </li>
+        </ul>
+    </div>
     {# Right zone #}
     <div id="learning_path_right_zone" class="{{ show_left_column == 1 ? 'content-scorm' : 'no-right-col' }}">
         <div class="lp-view-zone-container">
@@ -372,13 +369,16 @@
             $('#lp-view-expand-button, #lp-view-expand-toggle').on('click', function (e) {
                 e.preventDefault();
                 $('#learning_path_main').toggleClass('lp-view-collapsed');
+
                 $('#lp-view-expand-toggle span.fa').toggleClass('fa-compress');
                 $('#lp-view-expand-toggle span.fa').toggleClass('fa-expand');
                 var className = $('#lp-view-expand-toggle span.fa').attr('class');
                 if (className == 'fa fa-expand') {
+                    $('#tool-expand').css('left','0');
                     $(this).attr('title', '{{ "Expand" | get_lang }}');
                 } else {
                     $(this).attr('title', '{{ "Collapse" | get_lang }}');
+                    $('#tool-expand').css('left','23%');
                 }
 
                 if($('#navTabsbar').is(':hidden')) {
@@ -391,14 +391,17 @@
             $('#lp-view-expand-button, #lp-view-expand-toggle').on('click', function (e) {
                 e.preventDefault();
                 $('#learning_path_main').toggleClass('lp-view-collapsed');
+
                 $('#lp-view-expand-toggle span.fa').toggleClass('fa-expand');
                 $('#lp-view-expand-toggle span.fa').toggleClass('fa-compress');
 
                 var className = $('#lp-view-expand-toggle span.fa').attr('class');
                 if (className == 'fa fa-expand') {
+                    $('#tool-expand').css('left','0');
                     $(this).attr('title', '{{ "Expand" | get_lang }}');
                 } else {
                     $(this).attr('title', '{{ "Collapse" | get_lang }}');
+                    $('#tool-expand').css('left','23%');
                 }
             });
         {% endif %}
