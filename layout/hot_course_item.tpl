@@ -1,17 +1,18 @@
 {% for item in hot_courses %}
     {% if item.title %}
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="items items-hotcourse">
+
+    <div class="item">
+            <div class="items items-hotcourse" style="margin-left: 1em; margin-top: 27px">
                 <div class="image">
                         <a title="{{ item.title}}" href="{{ _p.web }}course/{{ item.real_id  }}/about">
                             <img src="{{ item.course_image_large }}" class="img-responsive" alt="{{ item.title }}">
                         </a>
-
                     {% if item.categoryName != '' %}
                         <span class="category">{{ item.categoryName }}</span>
                         <div class="cribbon"></div>
                     {% endif %}
                     <div class="user-actions">{{ item.description_button }}</div>
+                    
                 </div>
                 <div class="description">
                     <div class="block-title">
@@ -46,5 +47,7 @@
                 </div>
             </div>
         </div>
+
+     
     {% endif %}
 {% endfor %}
