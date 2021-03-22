@@ -8,8 +8,12 @@
 {% block head %}
     {% include 'layout/head.tpl'|get_template %}
 {% endblock %}
+    <link rel="stylesheet" href="{{ _p.web_css_theme }}/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ _p.web_css_theme }}/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <script src="{{ _p.web_css_theme }}/owlcarousel/dist/owl.carousel.min.js"></script>
 </head>
 <body>
+
     <noscript>{{ "NoJavascript"|get_lang }}</noscript>
     <main id="main" dir="{{ text_direction }}" class="{{ section_name }} {{ login_class }}">
             {% if displayCookieUsageWarning == true %}
