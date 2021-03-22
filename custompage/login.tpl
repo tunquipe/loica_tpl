@@ -49,13 +49,20 @@
                             {% endif %}
                             <div class="last-password">
                                 <a href="{{ url_lost_password }}">
-                                    {{ 'LostPassword'|get_lang() }}
+                                    {{ 'LostPassword'|get_lang() }} </br>
                                 </a>
                             </div>
                         </form>
+                        <h3 style="text-align:center"><b>{{'Help'|get_lang() }}</b></h3>
                         <div class="text-help">
-                            {{ 'HelpLoginPortal'|get_lang() }}
+                           <h5 style="text-align:center"> {{ 'HelpLoginPortal'|get_lang() }}</h5>
                         </div>
+                        <div style="text-align:center">
+                            <button type="submit"  href="#" style="background:#063d70; border-radius:18px; padding:4px 15px 6px 15px; border-color:#ff7123; margin-top: 1.5em">
+                                Soporte Técnico
+                            </button>  
+                        </div>
+                        
                         <div class="software-name">
                             <a href="{{_p.web}}" target="_blank">
                                 {{ "PoweredByX" |get_lang | format(_s.software_name) }}
