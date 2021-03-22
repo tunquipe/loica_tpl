@@ -16,11 +16,11 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-blue">
+                        <div class="form-blue" style="text-align: center;">
                             {{ form }}
-                            <a href=/index.php style= text-decoration:none >
-                                <button class="btn btn-primary btn-block" ><i class="fa fa-undo" aria-hidden="true" >
-                                    </i> {{ "Return"|get_lang }}   
+                            <a href=/index.php >
+                                <button type="submit">
+                                    </i> {{ "ReturnLogin"|get_lang }}   
                                 </button>
                             </a>
                             <div class="software-name">
