@@ -49,8 +49,8 @@
                                 </a>
                             </div>
                         </form>
-                        <div class="text-help">
-                            {{ 'HelpLoginPortal'|get_lang() }}
+                        <div class="text-help" style="text-align: center;">
+                            {{ 'HelpLoginPortalPlaySchool'|get_lang() }}
                         </div>
                         <div class="software-name">
                             <a href="{{_p.web}}" target="_blank">

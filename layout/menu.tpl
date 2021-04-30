@@ -28,9 +28,16 @@
                         </li>
                     {% endif %}
                 {% endfor %}
+
             </ul>
             {% if _u.logged == 1 and not user_in_anon_survey %}
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="gmail-inbox">
+                        <a target="_blank" href="http://correo.playschool.edu.pe">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            {{ "EmailInbox"|get_lang }}
+                        </a>
+                    </li>
                     <li id="count_message_li" class="hidden">
                         <a href="{{ message_url }}">
                             <span class="spinner">
@@ -111,4 +118,3 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
