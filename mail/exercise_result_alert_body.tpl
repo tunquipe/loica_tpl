@@ -2,8 +2,7 @@
     <p><strong>{{ 'DearStudentEmailIntroduction'|get_lang }}</strong>. {{ 'AttemptVCC'|get_lang }} </p>
     <div style="border-color: #bce8f1; padding: 15px; background-color: #d9edf7; margin-bottom: 15px; font-size: 16px; color:#31708f;">
         <p>
-            <strong>{{ 'Session'|get_lang }}: </strong>
-            {{ session_title }}
+            <strong>{{ session_title }}</strong>
             <br>
             <strong>{{ 'Course'|get_lang }}: </strong>
             {{ course_title }}
@@ -15,7 +14,7 @@
 
     <p>{{ 'ClickLinkToViewComment'|get_lang }}</p>
     <p><a style="font-weight: bold; color: #2BA6CB;" href="{{ url }}">{{ url }}</a></p>
-    <div style="text-align: right;">
+    <div style="text-align: left;">
         <p><strong>{{ 'Regards'|get_lang }}</strong><br>
             {{ teacher_name }}</p>
     </div>
