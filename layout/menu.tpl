@@ -33,6 +33,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li id="count_message_li" class="hidden">
                         <a href="{{ message_url }}">
+                            <span class="spinner">
+                                <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+                            </span>
                             <span id="count_message" class="badge badge-warning"></span>
                         </a>
                     </li>
