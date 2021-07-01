@@ -31,6 +31,9 @@
             </ul>
             {% if _u.logged == 1 and not user_in_anon_survey %}
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="video_tuto"><a href="https://tutoriales.escincridirincri.edu.pe/"><i class="fa fa-video-camera" aria-hidden="true">
+                        </i> Ir a Tutoriales</a>
+                     </li>
                     <li id="count_message_li" class="hidden">
                         <a href="{{ message_url }}">
                             <span class="spinner">
@@ -52,6 +55,7 @@
                                 <span class="username-movil">{{ _u.complete_name }}</span>
                                 <span class="caret"></span>
                             </a>
+                            
                             <ul class="dropdown-menu" role="menu">
                                 <li class="user-header">
                                     <div class="text-center">
