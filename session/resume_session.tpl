@@ -59,6 +59,14 @@
             {% endif %}
         </td>
     </tr>
+    {% if session.country %}
+    <tr>
+        <td>{{ 'Country' | get_lang}}</td>
+        <td>
+            {{ session.country }}
+        </td>
+    </tr>
+    {% endif %}
     <tr>
         <td>{{ 'SessionVisibility' | get_lang}} </td>
         <td>
