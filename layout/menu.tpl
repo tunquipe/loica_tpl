@@ -7,9 +7,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ _p.web }}">
-                <img src="{{ _p.web_css_theme }}images/header-logo.png"/>
-            </a>
+            {{ logo }}
+
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
