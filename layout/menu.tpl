@@ -7,7 +7,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {{ logo }}
+            <div class="navbar-brand">
+                {{ logo }}
+            </div>
 
         </div>
         <div id="navbar" class="collapse navbar-collapse">
