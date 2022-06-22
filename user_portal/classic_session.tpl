@@ -156,7 +156,8 @@
                                 {% set number = -1 %}
 
                                 {% for item in row.courses %}
-
+                                
+                                    {% if item.visibility == true %}
                                     <div id="course_{{ row.id }}_{{ item.real_id }}" class="card-course">
                                         {% set number = number + 1 %}
                                         {% if number <= 0 %}
@@ -195,6 +196,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
 
