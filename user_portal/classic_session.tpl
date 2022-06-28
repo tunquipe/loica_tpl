@@ -51,6 +51,40 @@
         font-weight: 800;
         color: #5B5B5B;
     }
+    .bg-row-0{
+        background-color: #F2B66C;
+    }
+    .bg-row-1{
+        background-color: #799CFA;
+    }
+    .bg-row-2{
+        background-color: #B3B8CE;
+    }
+    .bg-row-3{
+        background-color: #4E4A57;
+    }
+    .bg-row-4{
+        background-color: #0A124a;
+    }
+    .bg-row-5{
+        background-color: #b0a0d5;
+    }
+    .bg-row-6{
+        background-color: #7ea3a7;
+    }
+    .bg-row-7{
+        background-color: #a77e95;
+    }
+    .bg-row-8{
+        background-color: #ff8787;
+    }
+    .bg-row-9{
+        background-color: #7b8fc7;
+    }
+    .bg-row-10{
+        background-color: #815ca2;
+    }
+
     @media (max-width: 480px) {
         .card-course .card-content{
             white-space: normal;
@@ -154,18 +188,22 @@
                         <div class="sessions-items">
                             <div class="list-card-course">
                                 {% set number = -1 %}
-
+                                {% set subnumber = 1 %}
+                                {% set rownumber = 0 %}
                                 {% for item in row.courses %}
-                                
+
                                     {% if item.visibility == true %}
                                     <div id="course_{{ row.id }}_{{ item.real_id }}" class="card-course">
                                         {% set number = number + 1 %}
+
                                         {% if number <= 0 %}
-                                            {% set color = '#F2B66C' %}
-                                        {% else %}
-                                            {% set color = '#799CFA' %}
+                                            {% set color = 'bg-row-0' %}
+                                        {% elseif number >=1 %}
+                                            {% set subnumber = subnumber + 1 %}
+                                            {% set rownumber = subnumber // 2 %}
+                                            {% set color = '' %}
                                         {% endif %}
-                                        <div class="card-number" style="background-color: {{ color }};">
+                                        <div class="card-number {{ color }} bg-row-{{ rownumber }}">
                                             {% if number <= 0 %}
                                             <i class="fa fa-book" style="margin-top: 10px" aria-hidden="true"></i>
                                             {% else %}
