@@ -72,6 +72,14 @@
                                     </li>
                                 {% endif %}
 
+                                {% if tracking_url %}
+                                <li class="user-body">
+                                    <a href="{{ tracking_url }}">
+                                        <em class="fa fa-podcast"></em> {{ 'EvaluationFollowUp'|get_lang }}
+                                    </a>
+                                </li>
+                                {% endif %}
+
                                 {% if pending_survey_url %}
                                     <li class="user-body">
                                         <a href="{{ pending_survey_url }}">
