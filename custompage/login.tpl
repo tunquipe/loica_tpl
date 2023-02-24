@@ -5,7 +5,7 @@
             <div class="wrap-login width-login">
                 <form class="login100-form validate-form" action="{{ _p.web }}" method="post">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="padding-login">
                                 <div class="logo" style="text-align: center">
                                     <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
@@ -18,7 +18,7 @@
                                 </div>
                                 {% endif %}
                                 <div class="form-group">
-                                    <label for="user">{{ 'LoginOrEmailAddress'|get_lang() }}</label>
+                                    <label for="user">Correo Electrónico</label>
                                     <input type="text" class="form-control" id="user" name="login" ">
                                 </div>
                                 <div class="form-group">
@@ -47,7 +47,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <div id="vegas">
 
                             </div>
@@ -67,9 +67,15 @@
             { src: "{{ _p.web_css_theme }}images/slide1.jpg" },
             { src: "{{ _p.web_css_theme }}images/slide2.jpg" },
             { src: "{{ _p.web_css_theme }}images/slide3.jpg" },
-            { src: "{{ _p.web_css_theme }}images/slide4.jpg" }
+            { src: "{{ _p.web_css_theme }}images/slide4.jpg" },
+            { src: "{{ _p.web_css_theme }}images/slide5.jpg" },
+            { src: "{{ _p.web_css_theme }}images/slide6.jpg" },
+            { src: "{{ _p.web_css_theme }}images/slide7.jpg" },
         ],
-        cover: true,
-        overlay: '{{ _p.web_css_theme }}vegas/overlays/02.png'
+        cover: false,
+        overlay: false,
+        transition: 'blur2',
+        transitionDuration: 1000,
+        delay: 2500,
     });
 </script>
