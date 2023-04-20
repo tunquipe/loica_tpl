@@ -131,7 +131,7 @@
                                     <div class="price-text">
                                         {{ is_premium.total_price_formatted }}
                                     </div>
-                                    <div class="buy-box">
+                                    <div class="buy-box">4455444554445
                                         <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
                                            class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
                                     </div>
@@ -272,45 +272,50 @@
                                         {% endif %}
                                     </p>
                                 </div> -->
-                                {% if is_premium == false %}
-                                    <h5>{{ 'CourseSubscription'|get_lang }}</h5>
-                                    <div class="session-subscribe">
-                                        {% if _u.logged and not is_subscribed %}
-                                            {{ subscribe_button }}
-                                        {% elseif not _u.logged %}
-                                            {% if 'allow_registration'|api_get_setting != 'false' %}
-                                                <a href="{{ _p.web_main ~ 'auth/inscription.php' ~ redirect_to_session }}"
-                                                   class="btn btn-success btn-block btn-lg">
-                                                    <i class="fa fa-pencil" aria-hidden="true"></i> {{ 'SignUp'|get_lang }}
-                                                </a>
+                                {% if check_date == true %}
+                                    {% if is_premium == false %}
+                                        <h5>{{ 'CourseSubscription'|get_lang }}</h5>
+                                        <div class="session-subscribe">
+                                            {% if _u.logged and not is_subscribed %}
+                                                {{ subscribe_button }}
+                                            {% elseif not _u.logged %}
+                                                {% if 'allow_registration'|api_get_setting != 'false' %}
+                                                    <a href="{{ _p.web_main ~ 'auth/inscription.php' ~ redirect_to_session }}"
+                                                       class="btn btn-success btn-block btn-lg">
+                                                        <i class="fa fa-pencil" aria-hidden="true"></i> {{ 'SignUp'|get_lang }}
+                                                    </a>
+                                                {% endif %}
                                             {% endif %}
-                                        {% endif %}
-                                    </div>
-                                {% else %}
-                                    {% if is_subscribed %}
-
-                                        <div class="alert alert-success" role="alert">
-                                            {{ 'UserIsCurrentlySubscribed'|get_lang }}
                                         </div>
-                                        <a href="{{ _p.web }}user_portal.php?nosession=true" class="btn btn-primary btn-lg btn-block btn-course">
-                                            {{ 'GoToCourseSession'|get_lang }}
-                                        </a>
-
                                     {% else %}
-                                        <div class="session-price">
-                                            <div class="sale-price">
-                                                {{ 'SalePrice'|get_lang }}
+                                        {% if is_subscribed %}
+
+                                            <div class="alert alert-success" role="alert">
+                                                {{ 'UserIsCurrentlySubscribed'|get_lang }}
                                             </div>
-                                            <div class="price-text">
-                                                    {{ is_premium.total_price_formatted }}
+                                            <a href="{{ _p.web }}user_portal.php?nosession=true" class="btn btn-primary btn-lg btn-block btn-course">
+                                                {{ 'GoToCourseSession'|get_lang }}
+                                            </a>
+
+                                        {% else %}
+                                            <div class="session-price">
+                                                <div class="sale-price">
+                                                    {{ 'SalePrice'|get_lang }}
+                                                </div>
+                                                <div class="price-text">
+                                                        {{ is_premium.total_price_formatted }}
+                                                </div>
+                                                <div class="buy-box">
+                                                    <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
+                                                       class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
+                                                </div>
                                             </div>
-                                            <div class="buy-box">
-                                                <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
-                                                   class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
-                                            </div>
-                                        </div>
+                                        {% endif %}
                                     {% endif %}
+                                {% else %}
+                                    Venta no disponible
                                 {% endif %}
+
                                 {% if has_requirements %}
                                     <div class="session-requirements">
                                         <h5>{{ 'RequiredSessions'|get_lang }}</h5>
