@@ -313,7 +313,11 @@
                                         {% endif %}
                                     {% endif %}
                                 {% else %}
-                                    Venta no disponible
+                                    <h3 class="close-inscriptions">Inscripciones Cerradas</h3>
+                                    <a href="https://www.educacionchile.cl/" class="btn btn-primary btn-home">
+                                        <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+                                        Ver nuevas fechas
+                                    </a>
                                 {% endif %}
 
                                 {% if has_requirements %}
