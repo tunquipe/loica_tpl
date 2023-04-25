@@ -131,7 +131,7 @@
                                     <div class="price-text">
                                         {{ is_premium.total_price_formatted }}
                                     </div>
-                                    <div class="buy-box">4455444554445
+                                    <div class="buy-box">
                                         <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
                                            class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
                                     </div>
