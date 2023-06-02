@@ -9,7 +9,9 @@
                         <div class="col-md-6">
                             <div id="vegas">
                                 <div class="logo" style="text-align: center">
+                                    <a href="{{ _p.web }}">
                                     <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                                    </a>
                                 </div>
                                 <div class="description">
                                     Nos alegra verte de nuevo, ingresa tus datos y accede a tu aula virtual

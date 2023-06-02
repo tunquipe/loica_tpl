@@ -3,7 +3,9 @@
         <div class="container-login">
             <div class="wrap-login width-register">
                 <div class="logo">
-                    <img width="250px" class="img-responsive" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/header-logo.svg">
+                    <a href="{{ _p.web }}">
+                    <img width="250px" class="img-responsive" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                    </a>
                 </div>
                 <h3 class="title">{{ 'UserRegistrationTitle'|get_lang() }}</h3>
                 {{ form }}

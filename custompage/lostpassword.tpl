@@ -6,8 +6,10 @@
                     <div class="col-md-5">
                         <div id="vegas">
                             <div class="logo" style="text-align: center;">
+                                <a href="{{ _p.web }}">
                                 <img width="200px" class="img-responsive" style="display: inline-block;"
                                      title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                                </a>
                             </div>
                             <div class="character">
                                 <img width="350px" class="img-responsive" style="display: inline-block;"
@@ -18,6 +20,12 @@
                     <div class="col-md-7">
                         <div class="padding-login">
                             <h2 class="title-lost-password">¿Olvidaste tu contraseña?</h2>
+                            {% if error %}
+                            <div class="alert alert-warning" role="alert">
+                                {{ error }}
+                            </div>
+                            {% endif %}
+
                             <form class="form-grid" action="/main/auth/lostPassword.php" method="post" name="lost_password" id="lost_password">
                                 <div class="form-group">
                                     <label for="examlost_password_user" class="label-text-login">
