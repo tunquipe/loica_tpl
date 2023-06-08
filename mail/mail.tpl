@@ -34,7 +34,7 @@
                             <div {{ mail_content_style }}>
                                 {{ content }}
                             </div>
-                                  
+
                         </td>
                     </tr>
                     <!-- END MAIN CONTENT AREA -->
