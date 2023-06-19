@@ -5,7 +5,7 @@
 <p>Tus datos de acceso son los siguientes:</p>
 
 <div style="background: #F5EED0; padding: 10px 20px;">
-    <p><strong>URL de acceso</strong>: <a href="{{ _p.web }}">{{ _s.site_name }}</a><br>
+    <p><strong>URL de acceso</strong>: <a href="{{ _p.web }}">{{ _p.web }}</a><br>
     <strong>{{ 'Username'|get_lang }} :</strong> {{ login_name }}<br>
         <strong> {{ 'Pass'|get_lang }} :</strong> {{ original_password }}</p>
 </div>
