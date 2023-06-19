@@ -14,6 +14,7 @@
         });
     </script>
 {% endif %}
+
 <nav class="navbar navbar-default">
 
         <div class="navbar-header">
