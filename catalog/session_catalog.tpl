@@ -67,18 +67,22 @@
 <div class="row">
     <div class="grid-courses col-md-12">
         <div class="row">
-
             {% for item in sessions %}
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div id="session-{{ item.id }}" class="items items-courses items-sessions">
                     <div class="image">
-                        <a href="{{ _p.web ~ 'session/' ~ item.id ~ '/about/' }}" title="{{ item.name }}">
+                        {% if item.session_full %}
                             <img class="img-responsive" src="{{ item.image ? _p.web_upload ~ item.image : 'session_default.png'|icon() }}"
                                  alt="{{ item.name }}">
-                        </a>
+                        {% else %}
+                            <a href="{{ _p.web ~ 'session/' ~ item.id ~ '/about/' }}" title="{{ item.name }}">
+                                <img class="img-responsive" src="{{ item.image ? _p.web_upload ~ item.image : 'session_default.png'|icon() }}"
+                                     alt="{{ item.name }}">
+                            </a>
+                        {% endif %}
                         {% if item.category != '' %}
-                        <span class="category">{{ item.category }}</span>
-                        <div class="cribbon"></div>
+                            <span class="category">{{ item.category }}</span>
+                            <div class="cribbon"></div>
                         {% endif %}
                         <div class="admin-actions">
                             {% if item.edit_actions != '' %}
@@ -93,11 +97,17 @@
                     </div>
                     <div class="description">
                         <div class="block-title">
+                            {% if item.session_full %}
                             <h4 class="title">
-                                <a href="{{ _p.web ~ 'session/' ~ item.id ~ '/about/' }}" title="{{ item.name }}">
-                                    {{ item.name }}
-                                </a>
+                                {{ item.name }}
                             </h4>
+                            {% else %}
+                                <h4 class="title">
+                                    <a href="{{ _p.web ~ 'session/' ~ item.id ~ '/about/' }}" title="{{ item.name }}">
+                                        {{ item.name }}
+                                    </a>
+                                </h4>
+                            {% endif %}
                         </div>
                         {% if show_tutor and item.coach_id %}
                         <div class="block-author">
@@ -136,14 +146,14 @@
                             {{ item.duration ? 'SessionDurationXDaysLeft'|get_lang|format(item.duration) : item.date }}
                         </div>
                         {% endif %}
-                        <div class="toolbar row">
+                        <div class="toolbar">
                             {% if item.price %}
-                            <div class="col-sm-4">
+                            <div class="item-price">
                                 {{ item.price }}
                             </div>
                             {% endif %}
                             {% if _u.logged %}
-                            <div class="col-sm-8">
+                            <div class="item-subscribed">
                                 <div class="btn-group btn-group-sm" role="group">
                                     {% if not item.sequences is empty %}
                                     <a class="btn btn-default btn-sm" role="button"
@@ -152,8 +162,12 @@
                                         <i class="fa fa-sitemap" aria-hidden="true"></i>
                                     </a>
                                     {% endif %}
-                                    {% if item.is_subscribed == false %}
-                                    {{ item.subscribe_button }}
+                                    {% if item.session_full %}
+                                    <div class="item-close">Inscripciones cerradas por máximo de participantes</div>
+                                    {%  else %}
+                                        {% if item.is_subscribed == false %}
+                                            {{ item.subscribe_button }}
+                                        {% endif %}
                                     {% endif %}
                                 </div>
                             </div>
