@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <a href="{{ _p.web }}">
-                                    <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                                    <img width="250px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.svg">
                                 </a>
                             </div>
                             <div class="col-md-6">
@@ -18,7 +18,7 @@
                         </div>
                     {% else %}
                         <a href="{{ _p.web }}">
-                            <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                            <img width="250px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.svg">
                         </a>
                     {% endif %}
                 </div>
@@ -59,6 +59,6 @@
             }
         });
     });
-    
+
 
 </script>

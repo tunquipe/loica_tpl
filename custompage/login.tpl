@@ -10,7 +10,7 @@
                             <div id="vegas">
                                 <div class="logo" style="text-align: center">
                                     <a href="{{ _p.web }}">
-                                    <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                                    <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.svg">
                                     </a>
                                 </div>
                                 <div class="description">

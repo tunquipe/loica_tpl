@@ -67,6 +67,7 @@
 <div class="row">
     <div class="grid-courses col-md-12">
         <div class="row">
+
             {% for item in sessions %}
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div id="session-{{ item.id }}" class="items items-courses items-sessions">
