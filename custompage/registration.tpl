@@ -3,9 +3,24 @@
         <div class="container-login">
             <div class="wrap-login width-register">
                 <div class="logo-register">
-                    <a href="{{ _p.web }}">
-                    <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
-                    </a>
+                    {% if picture %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="{{ _p.web }}">
+                                    <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ _p.web }}">
+                                    <img width="150px" title="{{ _s.site_name }}" src="{{ picture }}">
+                                </a>
+                            </div>
+                        </div>
+                    {% else %}
+                        <a href="{{ _p.web }}">
+                            <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                        </a>
+                    {% endif %}
                 </div>
                 <h3 class="title">{{ title }}</h3>
 
