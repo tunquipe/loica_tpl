@@ -7,7 +7,7 @@
                     <img width="200px" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
                     </a>
                 </div>
-                <h3 class="title">Registro nuevo usuario</h3>
+                <h3 class="title">{{ title }}</h3>
 
                 {{ form }}
 
@@ -20,3 +20,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    let urlAjax = '{{ url_plugin }}/src/ajax.php?action=get_position';
+    $("#registration-two_sector").change(function (){
+        let idSector = $("#registration-two_sector").val();
+        $.ajax({
+            url: urlAjax + "&id_sector=" + idSector,
+            type: 'post',
+            dataType: 'json',
+            success: function (response){
+                let item = "";
+                $.each(response, function(index, value){
+                    //console.log(index + '----'+ value);
+                    item+='<option value="'+index+'">'+value+'</option>';
+                });
+                item+='<option value="999">Otros</option>';
+                $('#registration-two_position_company').html(item);
+                $('#registration-two_position_company').selectpicker('refresh');
+            },
+            error: function (){
+                alert("error")
+            }
+        });
+    });
+</script>
