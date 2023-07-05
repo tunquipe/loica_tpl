@@ -136,7 +136,7 @@
                                 </li>
                                 <li class="course_label_number_users">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    {{ item.nbr_users ~ ' ' ~ 'NbUsers'|get_lang }}
+                                    {{ item.nbr_users ~ '/' ~ item.maximum_users ~ ' ' ~ 'NbUsers'|get_lang }}
                                 </li>
                             </ul>
                         </div>
@@ -163,7 +163,7 @@
                                     </a>
                                     {% endif %}
                                     {% if item.session_full %}
-                                    <div class="item-close">Inscripciones cerradas por máximo de participantes</div>
+                                        <div class="item-close">Inscripciones cerradas por máximo de participantes</div>
                                     {%  else %}
                                         {% if item.is_subscribed == false %}
                                             {{ item.subscribe_button }}
