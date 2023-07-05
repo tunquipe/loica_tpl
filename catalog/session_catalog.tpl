@@ -102,7 +102,7 @@
                                 {{ item.name }}
                             </h4>
                             {% else %}
-                                <h4 class="title">
+                                <h4 class="title {{ item.session_enabled_user }}">
                                     <a href="{{ _p.web ~ 'session/' ~ item.id ~ '/about/' }}" title="{{ item.name }}">
                                         {{ item.name }}
                                     </a>
