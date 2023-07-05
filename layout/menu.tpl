@@ -110,7 +110,8 @@
                     </button>
                 {% endif %}
             {% endif %}
-            <a class="navbar-brand" href="{{ _p.web }}"> <em class="fa fa-home"></em> </a>
+
+
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">

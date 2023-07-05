@@ -38,6 +38,9 @@
             {% block menu %}
             {% include 'layout/menu.tpl'|get_template %}
             {% endblock %}
+            <div class="accessibility-font">
+                {{ accessibility }}
+            </div>
         </div>
     </div>
 </div>
