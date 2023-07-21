@@ -37,17 +37,17 @@
 </div>
 
 <script>
-    let urlAjax = '{{ url_plugin }}/src/ajax.php?action=get_position';
+    let urlAjax = '{{ url_plugin }}/src/ajax.php';
     $("#registration-two_stakeholders").change(function (){
         let idSelector = $("#registration-two_stakeholders").val();
-        console.log(idSelector);
+        //console.log(idSelector);
         if(idSelector == 1 ){
             $('#option-builder').hide();
         } else {
             $('#option-builder').show();
         }
-        /*$.ajax({
-            url: urlAjax + "&id_sector=" + idSector,
+        $.ajax({
+            url: urlAjax + "?action=get_position&id_stakeholders=" + idSelector,
             type: 'post',
             dataType: 'json',
             success: function (response){
@@ -56,15 +56,78 @@
                     //console.log(index + '----'+ value);
                     item+='<option value="'+index+'">'+value+'</option>';
                 });
-                item+='<option value="999">Otros</option>';
+                //item+='<option value="999">Otros</option>';
                 $('#registration-two_position_company').html(item);
                 $('#registration-two_position_company').selectpicker('refresh');
             },
             error: function (){
                 alert("error")
             }
-        });*/
+        });
     });
 
+    $("#registration-two_name_company").change(function (){
+        let idSelector = $("#registration-two_name_company").val();
+        //console.log(idSelector);
+        $.ajax({
+            url: urlAjax + "?action=get_administrator&id_company=" + idSelector,
+            type: 'post',
+            dataType: 'json',
+            success: function (response){
+                let item = response;
+                //console.log(response);
+                $('#registration-two_contact_manager').val(item);
+            },
+            error: function (){
+                alert("error")
+            }
+        });
+    });
+
+    $("#registration-two_area").change(function (){
+        let idSelector = $("#registration-two_area").val();
+        console.log(idSelector);
+        $.ajax({
+            url: urlAjax + "?action=get_management&id_area=" + idSelector,
+            type: 'post',
+            dataType: 'json',
+            success: function (response){
+                let item = "";
+                $.each(response, function(index, value){
+                    //console.log(index + '----'+ value);
+                    item+='<option value="'+index+'">'+value+'</option>';
+                });
+                //item+='<option value="999">Otros</option>';
+                $('#registration-two_department').html(item);
+                $('#registration-two_department').selectpicker('refresh');
+            },
+            error: function (){
+                alert("error")
+            }
+        });
+    });
+
+    $("#registration-two_department").change(function (){
+        let idSelector = $("#registration-two_department").val();
+        console.log(idSelector);
+        $.ajax({
+            url: urlAjax + "?action=get_headquarters&id_management=" + idSelector,
+            type: 'post',
+            dataType: 'json',
+            success: function (response){
+                let item = "";
+                $.each(response, function(index, value){
+                    //console.log(index + '----'+ value);
+                    item+='<option value="'+index+'">'+value+'</option>';
+                });
+                //item+='<option value="999">Otros</option>';
+                $('#registration-two_headquarters').html(item);
+                $('#registration-two_headquarters').selectpicker('refresh');
+            },
+            error: function (){
+                alert("error")
+            }
+        });
+    });
 
 </script>
