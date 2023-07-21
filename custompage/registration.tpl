@@ -38,9 +38,15 @@
 
 <script>
     let urlAjax = '{{ url_plugin }}/src/ajax.php?action=get_position';
-    $("#registration-two_sector").change(function (){
-        let idSector = $("#registration-two_sector").val();
-        $.ajax({
+    $("#registration-two_stakeholders").change(function (){
+        let idSelector = $("#registration-two_stakeholders").val();
+        console.log(idSelector);
+        if(idSelector == 1 ){
+            $('#option-builder').hide();
+        } else {
+            $('#option-builder').show();
+        }
+        /*$.ajax({
             url: urlAjax + "&id_sector=" + idSector,
             type: 'post',
             dataType: 'json',
@@ -57,7 +63,7 @@
             error: function (){
                 alert("error")
             }
-        });
+        });*/
     });
 
 
