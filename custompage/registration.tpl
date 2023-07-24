@@ -43,8 +43,10 @@
         //console.log(idSelector);
         if(idSelector == 1 ){
             $('#option-builder').hide();
+            $('#option-number').show();
         } else {
             $('#option-builder').show();
+            $('#option-number').hide();
         }
         $.ajax({
             url: urlAjax + "?action=get_position&id_stakeholders=" + idSelector,
