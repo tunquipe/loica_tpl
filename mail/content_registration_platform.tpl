@@ -14,4 +14,8 @@
     Cualquier duda técnica nos puedes escribir al email <strong>academy@proikos.pe</strong>
 </p>
 
+<div style="background: #fff1cd; border-radius: 10px; margin-bottom: 2rem; margin-top: 2rem; border: 2px solid #ffe9b1; padding: 2rem; ">
+    {{ 'ExtraWelcomeMessage' | get_lang }}
+</div>
+
 <p style="color: #EF7C00; font-weight: bold; font-size: 18px; text-align: center;">Saludos. Equipo online</p>
