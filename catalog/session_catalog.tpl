@@ -67,7 +67,19 @@
 <div class="row">
     <div class="grid-courses col-md-12">
         <div class="row">
+            <div class="message-extra">
+                <strong>Recuerda que:</strong>
+                <p>Los proximas fechas de inscripción a los cursos serán en las siguientes fechas:</p>
+                <ul>
+                    {% for item in sessions %}
+                    {% if item.session_hide == false %}
+                        <li>{{ item.name }}</li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
             {% for item in sessions %}
+            {% if item.session_hide == true %}
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div id="session-{{ item.id }}" class="items items-courses items-sessions {{ item.session_enabled_user }}">
                     <div class="image">
@@ -141,11 +153,13 @@
                             </ul>
                         </div>
                         {% endif %}
-                        {% if catalog_settings.sessions.show_session_date %}
-                        <div class="block-date">
-                            {{ item.duration ? 'SessionDurationXDaysLeft'|get_lang|format(item.duration) : item.date }}
-                        </div>
-                        {% endif %}
+                        {#
+                            {% if catalog_settings.sessions.show_session_date %}
+                            <div class="block-date">
+                                {{ item.duration ? 'SessionDurationXDaysLeft'|get_lang|format(item.duration) : item.date }}
+                            </div>
+                            {% endif %}
+                        #}
                         <div class="toolbar">
                             {% if item.price %}
                             <div class="item-price">
@@ -227,6 +241,7 @@
                     {% endif %}
                 </div>
             </div>
+            {% endif %}
             {% else %}
             <div class="col-xs-12">
                 <div class="alert alert-warning">
