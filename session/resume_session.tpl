@@ -79,6 +79,12 @@
             {{ session.code_reference }}
         </td>
     </tr>
+    <tr>
+        <td>{{ 'Stakeholders' | get_lang}} </td>
+        <td>
+            {{ session.stakeholders }}
+        </td>
+    </tr>
     {% if promotion %}
         <tr>
             <td>{{ 'Career' | get_lang}}</td>
