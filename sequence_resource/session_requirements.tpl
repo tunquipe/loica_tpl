@@ -38,7 +38,4 @@
     </div>
 {% endfor %}
 
-{% if allow_subscription %}
-    <hr>
-    <p>{{ subscribe_button }}</p>
-{% endif %}
+
