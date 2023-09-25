@@ -79,6 +79,7 @@
                 </ul>
             </div>
             {% for item in sessions %}
+
             {% if item.session_hide == true %}
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div id="session-{{ item.id }}" class="items items-courses items-sessions {{ item.session_enabled_user }}">
@@ -108,6 +109,7 @@
                         </div>
                     </div>
                     <div class="description">
+                        
                         <div class="block-title">
                             {% if item.session_full %}
                             <h4 class="title">
@@ -254,4 +256,4 @@
 </div>
 
 <!-- end view session grib -->
-{{ catalog_pagination }}
+{# catalog_pagination #}
