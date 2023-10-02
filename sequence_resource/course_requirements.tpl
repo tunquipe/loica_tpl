@@ -58,7 +58,3 @@
     <!--<div id="show_graph">{{ graph }}</div>-->
 {% endfor %}
 
-{% if allow_subscription %}
-    <hr>
-    <p>{{ subscribe_button }}</p>
-{% endif %}
