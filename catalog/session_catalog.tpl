@@ -71,10 +71,8 @@
                 <strong>Recuerda que:</strong>
                 <p>Los proximas fechas de inscripción a los cursos serán en las siguientes fechas:</p>
                 <ul>
-                    {% for item in sessions %}
-                    {% if item.session_hide == false %}
-                        <li>{{ item.name }}</li>
-                    {% endif %}
+                    {% for item in nexts %}
+                        <li>{{ item }}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -109,7 +107,7 @@
                         </div>
                     </div>
                     <div class="description">
-                        
+
                         <div class="block-title">
                             {% if item.session_full %}
                             <h4 class="title">
