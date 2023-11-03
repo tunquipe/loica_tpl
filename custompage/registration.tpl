@@ -132,4 +132,12 @@
         });
     });
 
+    $(document).ready(function() {
+        $('#registration-two_stakeholders').prop('required', true);
+        $('#registration-two_position_company').prop('required', true);
+        $('#registration-two_area').prop('required', true);
+        $('#registration-two_department').prop('required', true);
+        $('#registration-two_headquarters').prop('required', true);
+    });
+
 </script>
