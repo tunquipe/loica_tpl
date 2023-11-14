@@ -28,7 +28,7 @@
                                 <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;">
                                     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                         <tr>
-                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
+                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; color:#4e4957">
                                                 <!-- START HEADER LOGO -->
                                                 {% include 'mail/header.tpl'|get_template %}
                                                 <!-- END HEADER LOGO -->
@@ -51,9 +51,9 @@
                                         font-weight: 800;
                                         padding: 0;
                                         margin: 20px 0 0 0;
-                                        color: #624786;
+                                        color: #4e4957;
                                         ">Área de Ayuda y Soporte Técnico</h4>
-                                        <p style="margin: 5px 0 20px 0;text-decoration: none;color: #624786;">
+                                        <p style="margin: 5px 0 20px 0;text-decoration: none;color: #4e4957;">
                                             &nbsp;w w w . a u l a - v i r t u a l . c l&nbsp;
                                         </p>
                                 </td>
