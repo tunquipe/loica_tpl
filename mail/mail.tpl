@@ -51,12 +51,9 @@
                                         font-weight: 800;
                                         padding: 0;
                                         margin: 20px 0 0 0;
+                                        color: #624786;
                                         ">Área de Ayuda y Soporte Técnico</h4>
-                                        <p style="
-    margin: 5px 0 20px 0;
-    text-transform: uppercase;
-    text-decoration: none;
-">w w w . a u l a - v i r t u a l . c l</p>
+                                        <p style="margin: 5px 0 20px 0;text-decoration: none;color: #624786;">&nbsp;www.aula-virtual.cl&nbsp;</p>
                                 </td>
                             </tr>
                         </table>
