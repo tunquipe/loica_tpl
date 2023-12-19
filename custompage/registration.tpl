@@ -40,7 +40,7 @@
     let urlAjax = '{{ url_plugin }}/src/ajax.php';
     $("#registration-two_stakeholders").change(function (){
         let idSelector = $("#registration-two_stakeholders").val();
-        //console.log(idSelector);
+        console.log(idSelector);
         if(idSelector == 1 ){
             $('#option-builder').hide();
             $('#option-number').show();
@@ -68,7 +68,7 @@
         });
     });
 
-    $("#registration-two_name_company").change(function (){
+    /*$("#registration-two_name_company").change(function (){
         let idSelector = $("#registration-two_name_company").val();
         //console.log(idSelector);
         $.ajax({
@@ -84,7 +84,7 @@
                 alert("error")
             }
         });
-    });
+    });*/
 
     $("#registration-two_area").change(function (){
         let idSelector = $("#registration-two_area").val();
