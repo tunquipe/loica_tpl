@@ -94,13 +94,8 @@
                 <div class="panel-body">
                     <img src="{{ session_image }}" class="img-rounded img-responsive" width="100%">
                     <div class="session-info">
-                        {#<div class="date">
-                            {% if session.duration %}
-                                {{ 'SessionDurationXDaysTotal'|get_lang|format(session.duration) }}
-                            {% else %}
-                                {{ session_date.display }}
-                            {% endif %}
-                        </div>#}
+
+                    {% if check_date == true %}
                         {% if is_premium == false %}
                             <h5>{{ 'CourseSubscription'|get_lang }}</h5>
                             <div class="session-subscribe">
@@ -138,7 +133,13 @@
                                 </div>
                             {% endif %}
                         {% endif %}
-
+                        {% else %}
+                            <h3 class="close-inscriptions">Inscripciones Cerradas</h3>
+                            <a href="https://www.educacionchile.cl/" class="btn btn-primary btn-home">
+                                <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+                                Ver nuevas fechas
+                            </a>
+                        {% endif %}
                         {% if show_tutor and session.generalCoach %}
                             <div class="session-tutor">
                                 <em class="fa fa-user"></em> {{ 'SessionGeneralCoach'|get_lang }}:
@@ -298,6 +299,7 @@
                                             </a>
 
                                         {% else %}
+
                                             <div class="session-price">
                                                 <div class="sale-price">
                                                     {{ 'SalePrice'|get_lang }}
@@ -310,14 +312,17 @@
                                                        class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
                                                 </div>
                                             </div>
+
                                         {% endif %}
                                     {% endif %}
                                 {% else %}
+
                                     <h3 class="close-inscriptions">Inscripciones Cerradas</h3>
                                     <a href="https://www.educacionchile.cl/" class="btn btn-primary btn-home">
                                         <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
                                         Ver nuevas fechas
                                     </a>
+
                                 {% endif %}
 
                                 {% if has_requirements %}
