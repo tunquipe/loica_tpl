@@ -54,7 +54,7 @@
                                         color: #4e4957;
                                         ">Área de Ayuda y Soporte Técnico</h4>
                                         <p style="margin: 5px 0 20px 0;text-decoration: none;color: #4e4957;">
-                                            &nbsp;w w w . a u l a - v i r t u a l . c l&nbsp;
+                                            &nbsp;s e n c e . a u l a - v i r t u a l . c l&nbsp;
                                         </p>
                                 </td>
                             </tr>
