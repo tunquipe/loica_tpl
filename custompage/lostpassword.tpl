@@ -3,7 +3,10 @@
         <div class="container-login">
             <div class="wrap-login width-register">
                 <div class="logo" style="text-align: center;">
-                    <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                    <a href="{{ _p.web }}">
+                        <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
+                    </a>
+
                 </div>
                 {{ form }}
                 <div class="software-name">

@@ -10,7 +10,7 @@
                                 <div class="logo" style="text-align: center">
                                     <img width="200px" class="img-responsive" style="display: inline-block;" title="{{ _s.site_name }}" src="{{ _p.web_css_theme }}images/logo.png">
                                 </div>
-                                <h3 class="title">{{ 'Login'|get_lang() }}</h3>
+                                <h3 class="title">Ingresa al Aula Virtual</h3>
                                 {{ mgs_flash }}
                                 {% if error %}
                                 <div class="alert alert-warning" role="alert">
@@ -18,12 +18,12 @@
                                 </div>
                                 {% endif %}
                                 <div class="form-group">
-                                    <label for="user">Correo Electrónico</label>
-                                    <input type="text" class="form-control" id="user" name="login" ">
+                                    <!--<label for="user"></label>-->
+                                    <input type="text" class="form-control" id="user" name="login" placeholder="Usuario o Correo Electronico">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password">{{ 'Password'|get_lang() }}</label>
-                                    <input type="password" class="form-control" name="password" id="password" >
+                                    <!--<label for="password">{{ 'Password'|get_lang() }}</label>-->
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="{{ 'Password'|get_lang() }}">
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block">
