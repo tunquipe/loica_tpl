@@ -127,7 +127,9 @@
                                         {{ is_premium.total_price_formatted }}
                                     </div>
                                     <div class="buy-box">
-                                        <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
+                                        <!-- <a href="{{ _p.web }}plugin/buycourses/src/process.php?i={{ is_premium.product_id }}&t={{ is_premium.product_type }}"
+                                           class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>-->
+                                        <a href="{{ _p.web }}plugin/payments/process-check.php?item={{ is_premium.product_id }}&type={{ is_premium.product_type }}"
                                            class="btn btn-lg btn-primary btn-block">{{ 'BuyNow'|get_lang }}</a>
                                     </div>
                                 </div>
